@@ -64,40 +64,33 @@ console.log('convertedToString - ', convertedToString, typeof convertedToString)
 
 
 // task 4:
-let resource = "Wikipedia is a free online encyclopedia, created and edited by volunteers around the world and hosted by the Wikipedia Foundation."
+let resource = "Wikipedia is a free online encyclopedia, created and edited by volunteers around the world and hosted by the Wikipedia Foundation"
 
 console.log('length of wikipedia sentence - ', resource.length);
-
-console.log('check end of the sentence - ', resource.endsWith('world'));
-
+console.log('check end of the sentence - ', resource.endsWith('Foundation'));
+console.log('check if sentence contains world - ', resource.includes('world'));
 console.log(resource.replaceAll('Wikipedia', 'Resource'));
 
 
 // task 5:
-let p = Math.PI;
+let numberPI = Math.PI;
 
 let radiusOfCircle = 5;
-
-let areaOfCircle = p * (radiusOfCircle ** 2);
-
-console.log('calc area of circle - ', areaOfCircle);
-
-console.log('rounding area of circle', areaOfCircle.toFixed(2));
 
 let lengthOfRectangle = Math.PI;
 
 let widthOfRectangle = 7;
 
-let areaOfRectangle = lengthOfRectangle * widthOfRectangle;
-
-console.log('calc area of rectangle - ', areaOfRectangle);
-
-console.log('rounding area of rectangle', areaOfRectangle.toFixed(2));
-
 let heightOfCylinder = 12;
 
-let volumeOfCylinder = p * (radiusOfCircle ** 2) * heightOfCylinder;
+let areaOfCircle = numberPI * (radiusOfCircle ** 2);
+console.log('calc area of circle - ', areaOfCircle);
+console.log('rounding area of circle', areaOfCircle.toFixed(2));
 
+let areaOfRectangle = lengthOfRectangle * widthOfRectangle;
+console.log('calc area of rectangle - ', areaOfRectangle);
+console.log('rounding area of rectangle', areaOfRectangle.toFixed(2));
+
+let volumeOfCylinder = numberPI * (radiusOfCircle ** 2) * heightOfCylinder;
 console.log('calc volume of cylinder - ', volumeOfCylinder);
-
 console.log('rounding volume of cylinder', volumeOfCylinder.toFixed(2));
