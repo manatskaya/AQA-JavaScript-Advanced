@@ -1,9 +1,12 @@
 // task 1 - compare driving license age and allowance of obtain them
 let driversAge = 20;
+
 let driversLicenseAge = driversAge >= 18;
+
 let isDrivingAllowed = true;
 
-console.log(driversLicenseAge && isDrivingAllowed);
+console.log('is drivingAllowed - ', driversLicenseAge && isDrivingAllowed);
+
 
 // task 2 - create variables and then make a concatenation with "+" operator
 let userName1 = "Maria";
@@ -14,106 +17,87 @@ let greeting = "Hello";
 
 let greetGirls = greeting + " " + userName1 + " " + userName2;
 
-console.log(greetGirls);
+console.log('greeting using plus operand - ', greetGirls);
 
 // task 2 - create variables and then make a concatenation with concat method
 let girlName = "Julia";
 
 let boyName = "Andreas";
 
-
 let greetingInSpanish = "Ola";
-console.log(greetingInSpanish);
 
 let greetMuchachos = greetingInSpanish.concat(" ", girlName, " ", boyName);
-console.log(greetMuchachos);
+
+console.log('greeting in spanish via concat method - ', greetMuchachos);
+
 
 // task 3 - variable with value 5.489
-let p = "5.489";
-console.log(p, typeof p);
+let g = "5.489";
 
-let c = "5.489" - 1;
-console.log(c, typeof c);
+// variant 1 - implicit coercion of variable "c"
+let implicitCoercion = g - 0;
 
+console.log('result of implicit coercion - ', implicitCoercion, typeof implicitCoercion);
 
-// this is part to practice lesson 4
-// Arithmetic operators: "+", "-", "/", "*"
+// variant 2 - explicit coercion of variable "d"
+let explicitCoercion = parseFloat(g);
 
-// Plus operations
-let bookPage = 50;
-bookPage = bookPage + 3;
-console.log(bookPage);
+console.log('result of explicit coercion - ',explicitCoercion, typeof explicitCoercion);
 
-//Minus operations
-let bookPage1 = 50;
-bookPage1 = bookPage1 - 5;
-console.log('minus', bookPage1);
+let n = Number.isNaN(explicitCoercion);// 5.489 is not equal to NaN with isNan method - variant 1
 
-// "*"" operations
-let bookPage2 = 50;
-bookPage2 = bookPage2 * 10;
-console.log('*result', bookPage2);
+console.log('comparison to NaN using is NaN method - ', n);
 
-// "/" operations
-let division = 50;
-division = division/2;
-console.log(division);
+// 5.489 is not equal to NaN - variant 2:
+let m = 5.489 - undefined;
 
-// percentage % - will show left amount after division
-let multiplication = 18 % 5;
-console.log('multiplication', multiplication); //will show left amount after division
+console.log('comparison to NaN via undefined -', explicitCoercion === m);
 
-// decrement - will decrease your amount for 1 (-1)
-let decrement = 10;
-decrement --
-console.log('decrement', decrement);
+// 5.489 is not equal to NaN - variant 3:
+console.log('comparison to NaN using not equal operator - ', explicitCoercion != NaN);
 
-// increment - will increase your amount +1
-let increment = 10;
-increment ++
-console.log('increment', increment);
+console.log('rounding of 5.489 - ', explicitCoercion.toFixed(1));
 
-// just standard math calculation
-console.log('math', 5 * 5 - 10);
+let convertedToString = explicitCoercion.toString();
 
-// Comparison operators "==" non-strict comparison, "===" strict comparison
-let comparisonX = 10;
-let comparisonY = "10";
-
-let isEqual = comparisonX != comparisonY;
-let isEqualStrict = comparisonX !== comparisonY;
-console.log('non-strict comparison', comparisonX == comparisonY);
-console.log('compare comparison non-strict way', isEqual);
-console.log('compare comparison strict way',isEqualStrict);
-
-let comparisonZ = 10;
-let comparisonB = "10";// better use strict comparison
-console.log('strict comparison', comparisonZ === comparisonB);
-
-//< >
-console.log('big sign', 10 > 5);
-console.log('small sign', 10 < 5);
-console.log('small or equal', 10 <= 5);
-console.log('big or equal', 10 >= 10);
+console.log('convertedToString - ', convertedToString, typeof convertedToString);
 
 
-let greeting1 = "Hello World!";
+// task 4:
+let resource = "Wikipedia is a free online encyclopedia, created and edited by volunteers around the world and hosted by the Wikipedia Foundation."
 
-console.log(greeting1.length);
-console.log(greeting1[11]);
-console.log(greeting1.substring(11));
+console.log('length of wikipedia sentence - ', resource.length);
 
-let userName = "Ivan User";
-let userNameDB = "ivan user";
-let formatUserNameDB = userNameDB.toUpperCase();
-let formatUserName = userName.toUpperCase();
-console.log(formatUserName);
-console.log(formatUserNameDB);
-console.log(userName.toUpperCase() === userNameDB); // when we 
-console.log(userName.charAt(1)); // when we need to know what letter is on some place
-console.log(userName.indexOf(1)); // will show the letter which is used under index which specified in the brackets
-console.log(userName.endsWith("th")); // when we check if the end of the string ends with something
-console.log(userName.startsWith("Ivan"));// when we check if the begging of the string start with some letter
-console.log(userName.replace("Ivan", "Svitlana")); // when we need to input something in the console, but not change in the code
-let greetGirls2 = `${greeting} ${userName1} ${userName2}`;// concatenation of the string
-console.log('greeting2', greetGirls2);
+console.log('check end of the sentence - ', resource.endsWith('world'));
+
+console.log(resource.replaceAll('Wikipedia', 'Resource'));
+
+
+// task 5:
+let p = Math.PI;
+
+let radiusOfCircle = 5;
+
+let areaOfCircle = p * (radiusOfCircle ** 2);
+
+console.log('calc area of circle - ', areaOfCircle);
+
+console.log('rounding area of circle', areaOfCircle.toFixed(2));
+
+let lengthOfRectangle = Math.PI;
+
+let widthOfRectangle = 7;
+
+let areaOfRectangle = lengthOfRectangle * widthOfRectangle;
+
+console.log('calc area of rectangle - ', areaOfRectangle);
+
+console.log('rounding area of rectangle', areaOfRectangle.toFixed(2));
+
+let heightOfCylinder = 12;
+
+let volumeOfCylinder = p * (radiusOfCircle ** 2) * heightOfCylinder;
+
+console.log('calc volume of cylinder - ', volumeOfCylinder);
+
+console.log('rounding volume of cylinder', volumeOfCylinder.toFixed(2));
