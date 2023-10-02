@@ -90,7 +90,7 @@ switch (numberMonthOfYear){
         console.log('December');
         break;
     default:
-            console.log('new year started')
+            console.log('new year started');
    
 }
 
@@ -119,7 +119,7 @@ let index = 0;
 
 while (index < newString.length) {
     let currentLetter = newString.charAt(index);
-    index++;
+    
     console.log('->', currentLetter);
     
     if (currentLetter === 'a') {
@@ -129,4 +129,5 @@ while (index < newString.length) {
     if (currentLetter === 'n') {
         break;
     }
+    index++;
 } 
