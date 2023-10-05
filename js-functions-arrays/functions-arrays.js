@@ -1,24 +1,18 @@
 // Task 1.1. Function declaration:
 function myFunctionDeclaration (a,b) {
-    if (a > b) {
-        return a;
-    }
-    return b;
+    return a > b ? a : b;
 }
-myFunctionDeclaration (5,10);
-let resultFunctionDeclaration = myFunctionDeclaration (5,10);
+myFunctionDeclaration (5,11);
+let resultFunctionDeclaration = myFunctionDeclaration (5,11);
 
 console.log('result of function declaration',resultFunctionDeclaration);
 
 // Task 1.2. Function expression:
 let myFunctionExpression = function(a,b) {
-    if (a > b) {
-       return a;
-    }
-    return b;
+    return a > b ? a : b;
 }
-myFunctionExpression (4,0);
-let resultFunctionExpression = myFunctionExpression(4,0);
+myFunctionExpression (1,-1);
+let resultFunctionExpression = myFunctionExpression(1,-1);
 
 console.log('result of function expression', resultFunctionExpression);
 
@@ -34,8 +28,8 @@ let myFunctionArrowResult = myFunctionArrow (8,3);
 console.log('result of arrow function', myFunctionArrowResult);
 
 // 1.3. Arrow function, varian 2:
-let myFunctionArrowBoolean = (a, b) => a > b ? a : b;
-let myFunctionArrowResultSimple = myFunctionArrowBoolean (12,4);
+let myFunctionArrowBoolean = (a, b) => {return a > b ? a : b};
+let myFunctionArrowResultSimple = myFunctionArrowBoolean (13,5);
 
 console.log('result of arrow function simple way', myFunctionArrowResultSimple);
 
@@ -75,21 +69,20 @@ checkNestedArrayIncludes(nestedArray);
 // Task 4:
 // assumption made that the first element shall be divided on the last element in the array
 
-const numbers = [1, 2, 10, 3]; 
+const numbers = [1, 2, "b", 3]; 
 function divideArray(numbers) {
     const result = [];
     
-    if(numbers.length < 2) {
-        throw new Error('length of Array is too short');
-    }
-
     try {
+        if(numbers.length < 2) {
+            throw new Error('length of Array is too short');
+        }
         for (let i = 0; i < numbers.length; i++) {
             let currentValue = numbers[i];
             let res;
             console.log(currentValue);
-            if (typeof currentValue !== 'number' || currentValue === 0) {
-              throw new Error;
+            if (typeof currentValue !== 'number' || currentValue === 0|| numbers[i-1] === 0) {
+              throw new Error ('this is new error your element in the Array contains not equal to number or zero');
             }
             if(i === 0) {
                 res = currentValue / numbers[numbers.length - 1];
@@ -101,7 +94,7 @@ function divideArray(numbers) {
         }
     }
     catch (error) { 
-        console.log("error message: this is new error your element in the Array contains not equal to number or zero");
+        console.log(error.message);
     
     }
     finally {
