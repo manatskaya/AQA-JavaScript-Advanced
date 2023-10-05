@@ -6,9 +6,9 @@ function myFunctionDeclaration (a,b) {
     return b;
 }
 myFunctionDeclaration (5,10);
-
 let resultFunctionDeclaration = myFunctionDeclaration (5,10);
-    console.log('result of function declaration',resultFunctionDeclaration);
+
+console.log('result of function declaration',resultFunctionDeclaration);
 
 // Task 1.2. Function expression:
 let myFunctionExpression = function(a,b) {
@@ -18,9 +18,9 @@ let myFunctionExpression = function(a,b) {
     return b;
 }
 myFunctionExpression (4,0);
-
 let resultFunctionExpression = myFunctionExpression(4,0);
-    console.log('result of function expression', resultFunctionExpression);
+
+console.log('result of function expression', resultFunctionExpression);
 
 // 1.3. Arrow function, varian 1:
 let myFunctionArrow = (a, b) => {
@@ -30,13 +30,14 @@ let myFunctionArrow = (a, b) => {
     return b;
 }
 let myFunctionArrowResult = myFunctionArrow (8,3);
-    console.log('result of arrow function', myFunctionArrowResult);
+
+console.log('result of arrow function', myFunctionArrowResult);
 
 // 1.3. Arrow function, varian 2:
 let myFunctionArrowBoolean = (a, b) => a > b ? a : b;
-
 let myFunctionArrowResultSimple = myFunctionArrowBoolean (12,4);
-    console.log('result of arrow function simple way', myFunctionArrowResultSimple);
+
+console.log('result of arrow function simple way', myFunctionArrowResultSimple);
 
 // Task 2:
 function addOneParameter(value) {
