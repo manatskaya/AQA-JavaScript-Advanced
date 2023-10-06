@@ -28,8 +28,8 @@ let myFunctionArrowResult = myFunctionArrow (8,3);
 console.log('result of arrow function', myFunctionArrowResult);
 
 // 1.3. Arrow function, varian 2:
-let myFunctionArrowBoolean = (a, b) => {return a > b ? a : b};
-let myFunctionArrowResultSimple = myFunctionArrowBoolean (13,5);
+let myFunctionArrowBoolean = (a, b) => a > b ? a : b;
+let myFunctionArrowResultSimple = myFunctionArrowBoolean (9,5);
 
 console.log('result of arrow function simple way', myFunctionArrowResultSimple);
 
