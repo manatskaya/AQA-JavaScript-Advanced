@@ -113,8 +113,3 @@ function getUserInfo ({name, age}){
     console.log(`Full address is ${email + ", " + city + ", " + postalCode}`);
  }
 getFullAddress(user);
-
-
-  
-    
-
