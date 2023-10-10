@@ -65,8 +65,8 @@ for (const book of englishBooks) {
    }
     if (val === "George Orwell")
       book[prop] = "New author";
-}
-}
+        }
+    }
 console.log(englishBooks);
 
 // Task 5:
@@ -82,8 +82,8 @@ let languageObject = {
     user_3: { 
         languageName:"German",
         languageLevel: "A1",
-}
-}
+        }
+    }
 for (const key in languageObject) {
     //console.log(languageObject[key]);
     for (const element in languageObject[key]) {
@@ -102,8 +102,6 @@ let user = {
     postalCode: "E1 7DS",
     } 
 }
-
-
 function getUserInfo ({name, age}){
     console.log(`User info: ${name + " " + age}`);
 }
@@ -111,5 +109,5 @@ function getUserInfo ({name, age}){
 
  function getFullAddress({email, address: {city, postalCode} }) {
     console.log(`Full address is ${email + ", " + city + ", " + postalCode}`);
- }
+}
 getFullAddress(user);
