@@ -1,0 +1,26 @@
+{
+  "name": "aqa-javascript-advanced",
+  "version": "1.0.0",
+  "description": "learning project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manatskaya/AQA-JavaScript-Advanced.git"
+  },
+  "keywords": [
+    "test"
+  ],
+  "author": "Svitlana Manatska",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manatskaya/AQA-JavaScript-Advanced/issues"
+  },
+  "homepage": "https://github.com/manatskaya/AQA-JavaScript-Advanced#readme",
+  "devDependencies": {
+    "eslint": "^8.52.0",
+    "prettier": "3.0.3"
+  }
+}
